@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@color/backgroundColor">
+
+    <!-- CardView to contain all input fields for better visuals -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Date Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Date (YYYY-MM-DD)"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Category Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Category"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                android:layout_marginTop="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Amount Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Amount"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                android:layout_marginTop="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Description Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Description"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                android:layout_marginTop="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Update Button -->
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primaryColor"
+        android:padding="12dp"
+        android:text="Update Transaction"
+        android:textColor="@color/buttonTextColor" />
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <!-- Delete Button -->
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/buttonBackground"
+        android:padding="12dp"
+        android:text="Delete Transaction"
+        android:textColor="@color/buttonTextColor" />
+
+</LinearLayout>
